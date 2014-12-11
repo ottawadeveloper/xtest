@@ -1,0 +1,6 @@
+core = 7.x
+name = "Extended Tests"
+description = "Allows modules to declare test cases other than SimpleTest and manages their execution via Drush."
+
+files[] = classes/XTestTestRunnerInterface.php
+files[] = classes/XTestAbstractTestRunner.php

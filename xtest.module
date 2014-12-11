@@ -1,0 +1,27 @@
+<?php
+
+define('XTEST_OUTPUT_FORMAT_JUNIT', 'junit');
+
+function xtest_test_cases($type = NULL) {
+  module_load_include('internal.inc', 'xtest');
+  return _xtest_get_test_cases($type);
+}
+
+function xtest_test_runners($runner = NULL) {
+  module_load_include('internal.inc', 'xtest');
+  return _xtest_get_test_runners($runner);
+}
+
+function xtest_run_tests($options = array()) {
+  $options += array(
+    'type' => NULL,
+    'module' => NULL,
+    'name' => NULL,
+    'junit-output-file' => NULL,
+    'rebuild-tests' => FALSE,
+  );
+  module_load_include('internal.inc', 'xtest');
+  $testCases = _xtest_get_filtered_test_cases($options['type'], $options['module'], $options['name'], $options['rebuild-tests']);
+  var_dump($testCases);
+  return _xtest_execute_test_cases($testCases, $options);
+}

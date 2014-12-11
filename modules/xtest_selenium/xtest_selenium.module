@@ -1,0 +1,10 @@
+<?php
+
+function xtest_selenium_xtest_test_runners() {
+  return array(
+    'selenium' => array(
+      'name' => t('Selenium'),
+      'class' => 'XTestSeleniumTestRunner',
+    ),
+  );
+}

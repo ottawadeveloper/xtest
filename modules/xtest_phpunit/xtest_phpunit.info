@@ -1,0 +1,8 @@
+name = Extended Tests - PHPUnit
+description = "Extends the xtest module to allow PHPUnit tests to function."
+core = 7.x
+
+dependencies[] = xtest
+
+files[] = classes/ExtendedPhpUnitTestBase.php
+files[] = classes/XTestPhpUnitTestRunner.php

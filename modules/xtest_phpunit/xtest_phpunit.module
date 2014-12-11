@@ -1,0 +1,10 @@
+<?php
+
+function xtest_phpunit_xtest_test_runners() {
+  return array(
+    'phpunit' => array(
+      'name' => t('PHPUnit'),
+      'class' => 'XTestPhpUnitTestRunner',
+    ),
+  );
+}

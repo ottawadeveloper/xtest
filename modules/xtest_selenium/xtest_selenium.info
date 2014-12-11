@@ -1,0 +1,9 @@
+name = Extended Tests - Selenium Integration
+description = "Allows selenium tests to be run using PHPUnit"
+core = 7.x
+
+dependencies[] = xtest_phpunit
+dependencies[] = xtest
+
+files[] = classes/ExtendedSeleniumTestBase.php
+files[] = classes/XTestSeleniumTestRunner.php
