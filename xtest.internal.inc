@@ -40,7 +40,9 @@ function _xtest_get_test_cases($type = NULL, $reset = FALSE) {
   }
   if (!empty($type)) {
     if (isset($testCases[$type])) {
-      return $testCases[$type];
+      return array(
+        $type => $testCases[$type],
+      );
     }
     return array();
   }
