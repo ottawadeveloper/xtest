@@ -2,9 +2,9 @@
 
 define('XTEST_OUTPUT_FORMAT_JUNIT', 'junit');
 
-function xtest_test_cases($type = NULL) {
+function xtest_test_cases($type = NULL, $reset = FALSE) {
   module_load_include('internal.inc', 'xtest');
-  return _xtest_get_test_cases($type);
+  return _xtest_get_test_cases($type, $reset);
 }
 
 function xtest_test_runners($runner = NULL) {
