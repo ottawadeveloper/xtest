@@ -7,3 +7,4 @@ dependencies[] = xtest
 
 files[] = classes/ExtendedSeleniumTestBase.php
 files[] = classes/XTestSeleniumTestRunner.php
+files[] = classes/SeleniumCssColor.php
