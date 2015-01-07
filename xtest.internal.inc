@@ -57,7 +57,7 @@ function _xtest_build_test_case_list() {
     $infoFile = $module_path . '/' . $module . '.info';
     if (file_exists($infoFile)) {
       $info = drupal_parse_info_file($infoFile);
-      $testCases = array_merge($testCases, _xtest_build_test_case_list_for_module($module, $module_path, $info));
+      $testCases = array_merge_recursive($testCases, _xtest_build_test_case_list_for_module($module, $module_path, $info));
     }
   }
   return $testCases;
