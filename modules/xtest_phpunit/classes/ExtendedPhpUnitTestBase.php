@@ -20,4 +20,27 @@ class ExtendedPhpUnitTestBase extends PHPUnit_Framework_TestCase {
     return $prefix . $str;
   }
   
+  public function addJunkData(&$badValues, $omitValues = array()) {
+    $junkData = array(
+      TRUE,
+      FALSE,
+      NULL,
+      array(),
+      (object) array(),
+      0,
+      1,
+      '',
+      'RANDOMJUNKNOSPACES',
+      'THIS IS RANDOM JUNK DATA THAT SHOULD NOT MATCH ANYTHING - NOW WITH SPACES',
+      'Special chars: é’!@#$%^&*()"\'\\/{}[]|<>/?.,`~_+-=',
+      '1 or 1=1',
+      '1; DROP TABLE users',
+    );
+    foreach ($junkData as $datum) {
+      if (!in_array($datum, $omitValues, TRUE)) {
+        $badValues[] = $junkData;
+      }
+    }
+  }
+  
 }
