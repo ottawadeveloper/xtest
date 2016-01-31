@@ -31,6 +31,14 @@ function drush_xtest() {
   xtest_run_tests($options);
 }
 
+/**
+ * List of options that can be used with this drush command.
+ * 
+ * @return array
+ *   An array of options, where the keys are the option to be
+ *   provided, and the values are the English text strings that
+ *   describe them.
+ */
 function _xtest_drush_options() {
   return array(
     'type' => 'Limit tests to the specified test type.',
